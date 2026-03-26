@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial Video</title>
+    <link rel="stylesheet" href="CSS/estilo1.css">
+    <link rel="shortcut icon" href="imagenes/favicon.ico">
+</head>
+<body>
+    <header>
+        <h1>Tutorial HTML5 CSS Video</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="bordes.html">Bordes</a></li>
+            <li><a href="sombras.html">Sombras</a></li>
+            <li><a href="imagenes.html">Imagenes</a></li>
+            <li><a href="posicion.html">Posicion</a></li>
+            <li><a href="transformacion.html">Transformacion</a></li>
+            <li><a href="formularios.html">Formularios</a></li>
+            <li><a href="iframe.html">Iframes</a></li>
+            <li><a href="transiciones.html">Transiciones</a></li>
+            <li><a href="columnas.html">Columnas</a></li>
+            <li><a href="video.html">Video</a></li>
+            <li><a href="audio.html">Audio</a></li>
+            <li><a href="transpariencia.html">Transpariencias</a></li>
+            <li><a href="animacion.html">Animacion</a></li>
+            <li><a href="SVG.html">SVG</a></li>
+            <li><a href="responsive.html">Responsive</a></li>
+            <li><a href="contenidoeditable.html">Contenido Editable</a></li>
+            <li><a href="storage.html">Storage</a></li>
+        </ul>
+    </nav>
+    <section>
+        <h2>Diferentes estandares de videos</h2>
+        <article>
+            <p>Aunque el código HTML5 para la inserción de vídeo directamente en HTML5 es muy sencillo, todavía tiene un único inconveniente. No todos los navegadores aceptan todos los formatos de vídeo existentes. De hecho de los 3 estándares existentes, el único navegador que los acepta a todos es Chrome.
+                Así que, si queremos que el vídeo se pueda visualizar en todos los navegadores tendremos que añadir el mismo vídeo en distintos formatos.
+                Actualmente existen 3 estándares de vídeo que utilizan códecs diferentes y que vienen impulsados por grandes empresas.</p>
+            <h3>Formatos</h3>
+            <img src="imagenes/videos.png">
+        </article>
+
+        <h2>Video</h2>
+        <article>
+            <p>El código HTML estándar para visualizar un único formato de vídeo sería:
+                < video >
+                < source src="video.ogv" type="video/ogg"/ >
+                < /video >
+                En el tag < video > es posible incorporar un gran número de atributos que nos ayudan a poder controlar mejor el video, como son:</p>
+
+            <h3>Atributos</h3>
+                <ul>
+                    <li><b>width</b>: Indica la anchura del vídeo, expresada en píxeles (px) o en porcentaje (%)</li>
+                    <li><b>height</b>: Indica la altura del vídeo, expresada en píxeles (px) o en porcentaje (%)</li>
+                    <li><b>controls</b>: Establece si tendrá la barra de navegación (play, stop, volumen...) o no</li>
+                    <li><b>autoplay</b>: Indica si el vídeo se inicia detenido o ya aparece por defecto reproduciéndose</li>
+                    <li><b>loop</b>: Establece si al acabar el vídeo, éste debe volver a empezar o no</li>
+                    <li><b>muted</b>: Indica si el audio se reproduce o se reproduce sin audio</li>
+                    <li><b>preload</b>: Indica si el vídeo se empieza a cargar cuando el navegador carga la página html</li>
+                    <li><b>poster</b>: Da la posibilidad de establecer una imagen (jpg, gif o png) como fotograma inicial del video</li>
+                </ul>
+
+                <video width="640" height="400" controls loop muted poster="" >
+                    <source src="../Tutorial/imagenes/Cosmohedron _ Animated Short.mp4" type="video/mp4">
+                </video>
+        </article>
+        
+        <h2>Desde internet</h2>
+
+        <article>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/QylEwbia4ho?si=aRrA7ihO-fZDzpee" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </article>
+
+    </section>
+     
+    <aside>
+        <h3>Links</h3>
+        <p> Ir a otra pagina </p>
+    </aside>
+
+    <footer>
+        <p> Contactos con: Emily Muñoz </p>
+    </footer> 
+</body>        
+</html>

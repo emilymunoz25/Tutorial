@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bordes y redondeo</title>
+    <link rel="stylesheet" href="CSS/estilo1.css">
+</head>
+<body>
+    <header>Tutorial CSS Bordes y Redondeo</header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="bordes.html">Bordes</a></li>
+            <li><a href="sombras.html">Sombras</a></li>
+            <li><a href="imagenes.html">Imagenes</a></li>
+            <li><a href="posicion.html">Posicion</a></li>
+            <li><a href="transformacion.html">Transformacion</a></li>
+            <li><a href="formularios.html">Formularios</a></li>
+            <li><a href="iframe.html">Iframes</a></li>
+            <li><a href="transiciones.html">Transiciones</a></li>
+            <li><a href="columnas.html">Columnas</a></li>
+            <li><a href="video.html">Video</a></li>
+            <li><a href="audio.html">Audio</a></li>
+            <li><a href="transpariencia.html">Transpariencias</a></li>
+            <li><a href="animacion.html">Animacion</a></li>
+            <li><a href="SVG.html">SVG</a></li>
+            <li><a href="responsive.html">Responsive</a></li>
+            <li><a href="contenidoeditable.html">Contenido Editable</a></li>
+            <li><a href="storage.html">Storage</a></li>
+        </ul>
+    </nav>
+    <section>
+        <h2>Lineas separadas horizontales</h2>
+
+        <article>
+            <p>Existen dos formas para crear una línea separadora horizontal y una única forma para crear una línea separadora vertical. 
+                Para crear una línea horizontal la forma fácil y rápida es utilizar la etiqueta < hr >, que no se cierra y que crea una línea horizontal simple.
+            </p>
+
+            <p>En lo referente a los tipos de bordes existen las siguientes posibilidades:
+
+            <b>none</b>: sin línea.
+            <b>solid</b>: con línea continua (valor por defecto).
+            <b>dotted</b>: línea punteada.
+            <b>dashed</b>: línea discontinua (segmentos cortos de línea).
+            <b>inset</b>: línea con el color en bajorelieve.
+            <b>outset</b>: línea que simula el relieve.</p>
+
+            <h3>Ejemplo</h3>
+                <hr>
+        </article>
+
+        <h2>Lineas separadas verticales</h2>
+        <article>
+            <div>Para crear líneas verticales tenemos que definir uno de los 4 bordes que tiene una caja  (< div >), utilizando una (o varias) de estas propiedades:</div>
+
+            <h3>Ejemplo</h3>
+        </article>
+        <h2>Bordes simples</h2>
+
+        <div id="borde_redondo">
+            borde simple
+        </div>
+
+        <p>
+            <br>width: 300px;
+            <br>height: 100px;
+            <br>border: 3px solid blue;
+            <br>border-radius: 22px;
+            <br>padding-left: 15px;
+            <br>padding-top: 30px;
+        </p>
+
+        <h2>Bordes redondeados</h2>
+        <article>
+            <p>Con la propiedad border-radius tenemos la posibilidad de crear < div > con las esquinas con bordes redondeados, pudiendo especificar la suavidad de las esquinas de manera conjunta o cada una de las esquinas por separado.
+                Para poder visualizar una esquina con borde redondeado, además de la propiedad border-radius, tenemos que definir un borde normal (con border) y/o indicar un color de fondo (con background-color).</p>
+        </article>
+
+        <div id="bordes_diferentes">
+            Ejemplo de bordes diferentes
+            <br>border-radius: 10px 0px 39px 22px;
+        </div>
+    </section>
+
+    <aside>
+        <h3>Links</h3>
+        <p> Ir a otra pagina </p>
+    </aside>
+
+    <footer>
+        <p> Contactos con: Emily Muñoz </p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,282 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header{
+    background-color: #333;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 2px;
+}
+
+header h1{
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+nav{
+    background-color: #34495e;
+    padding: 1rem;
+    border-radius: 0 0 8px 8px;
+    margin-bottom: 2rem;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover{
+    background-color: #b9bfc5;
+}
+
+section{
+    flex: 2;
+    min-width: 300px;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+section h2{
+    background-color: rgb(121, 187, 245);
+    border-radius: 5px;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 0.5rem;
+    padding-left: 20px;
+    text-align: justify;
+}
+
+article{
+    background-color: #f9f9f9;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 6px;
+    border-left: 4px solid #3498db;
+}
+
+article hr{
+    border-width: 6px;
+    border-style: dotted;
+    border-color: rgb(33, 135, 218);
+    width: 7px;
+}
+
+article h3{
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+/*article div{
+    border-top: 1px solid rgb(46, 19, 223);
+    border-bottom: 2px dotted rgb(64, 0, 128);
+    border-right: 1px dashed #3C5391;
+    border-left: 1px inset orange;
+}*/
+
+article h4{
+    background-color: rgb(8, 34, 56);
+    border-radius: 5px;
+    color: #96bada;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 0.5rem;
+}
+
+#sombra{
+    box-shadow: 6px 20px 10px rgba(101, 8, 120, 0.103);
+}
+
+#borde_redondo{
+    width: 300px;
+    height: 100px;
+    border: 3px solid rgb(148, 10, 175);
+    border-radius: 22px;
+    padding-left: 15px;
+    padding-top: 30px;
+}
+
+#bordes_diferentes{
+    border: 3px solid rgb(24, 20, 80);
+    border-radius: 10px 0px 39px 22px;
+    padding-left: 20px;
+}
+
+#interna{
+    width: 700px;
+    height: 50px;
+    padding-left: 20px;
+    padding-top: 20px;
+    box-shadow: 7px 9px 15px rgb(80, 94, 172) inset;
+}
+
+#halo{
+    width: 700px;
+    height: 50px;
+    background-color: #dde1e4;
+    box-shadow: 10px, 10px, 20px rgb(160, 160, 255);
+    padding: 10px 10px 10px 10px;
+}
+
+#sombra{
+    text-shadow: 10px 10px 5px rgba(226, 140, 10, 0.411);
+}
+
+footer{
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 2rem;
+}
+
+footer p{
+    margin: 0;
+}
+
+#fondo1{
+    width: 350px;
+    height: 100px;
+    background-color: rgba(23, 10, 3, 0.1);
+}
+
+#fondo2{
+    width: 1000px;
+    height: 200px;
+    background:url("../imagenes/fondo.jpg");
+    background-repeat: repeat-y;
+    background-size:200px 100px;
+}
+
+#fondo3{
+    width: 1000px;
+    height: 300px;
+    background: url('../imagenes/barco.gif'), url('../imagenes/tectoimg.jpg'),
+    url('../imagenes/fondoluna.jpg')
+}
+
+#fondo4
+{
+    width: 1000px;
+    height: 300px;
+    background:url('../imagenes/fondoluna.jpg');
+    background-attachment:fixed;
+
+}
+
+aside{
+    flex: 1;
+    min-width: 250px;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+aside h3{
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #e74c3c;
+    padding-bottom: 0.5rem;
+}
+
+aside p{
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.contenedor{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background-color: lightgray;
+
+}
+
+#relative{
+    width: 150px;
+    height: 150px;
+    background-color: rgb(79, 213, 117);
+    position: relative;
+    top: -300px;
+    left: -200px;
+}
+
+#absolute{
+    position: absolute;
+    left: 200px;
+    top: 200px;
+    background: rgb(82, 175, 170);
+}
+
+#fixed{
+    width: 150px;
+    height: 80px;
+    background-color: green;
+    color: white;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+}
+
+#ejemplo{
+    width: 700px;
+    height: 120px;
+    background-color: rgb(213, 225, 231);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+#martillo{
+    transform: translate(200px, 5px);
+}
+
+#martillo2{
+    transform: translate(50%, 0px);
+}
+
+#martillo3{
+    transform: rotate(90deg);
+}
+
+#martillo4{
+    transform: scale(2, 1.45);
+}
+
+#martillo5{
+    transform: skew(10deg, 25deg);
+}
+
+#martillo6{
+    transform: translate(200px, 0px) rotate(33deg) scale(0.5, 0.5);
+}

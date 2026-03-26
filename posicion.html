@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posicion</title>
+    <link rel="stylesheet" href="CSS/estilo1.css">
+    
+</head>
+<body>
+    <header> </header>
+    <nav>
+        <ul>    
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="bordes.html">Bordes</a></li>
+            <li><a href="sombras.html">Sombras</a></li>
+            <li><a href="imagenes.html">Imagenes</a></li>
+            <li><a href="posicion.html">Posicion</a></li>
+            <li><a href="transformacion.html">Transformacion</a></li>
+            <li><a href="formularios.html">Formularios</a></li>
+            <li><a href="iframe.html">Iframes</a></li>
+            <li><a href="transiciones.html">Transiciones</a></li>
+            <li><a href="columnas.html">Columnas</a></li>
+            <li><a href="video.html">Video</a></li>
+            <li><a href="audio.html">Audio</a></li>
+            <li><a href="transpariencia.html">Transpariencias</a></li>
+            <li><a href="animacion.html">Animacion</a></li>
+            <li><a href="SVG.html">SVG</a></li>
+            <li><a href="responsive.html">Responsive</a></li>
+            <li><a href="contenidoeditable.html">Contenido Editable</a></li>
+            <li><a href="storage.html">Storage</a></li>
+        </ul>
+    </nav>
+    <section>
+        <h2>Posicionamiento de las cajas</h2>
+        <p>
+            Existen tres opciones de posicionamiento de las cajas dentro del < body >.
+        </p>
+
+        <article>
+            <h3>Relative</h3>
+            <div>
+                Este es el tipo de posicionamiento por defecto.
+                <br>Las cajas o < divs > se posicionan siempre en relación al resto de < divs >. Si se mueven o se modifica el tamaño de las cajas anteriores, las cajas que hayan debajo se moverán.
+                <br>Con este posicionamiento NO es posible colocar una caja encima de otra.
+            </div>   
+            <h3>Ejemplo: </h3>
+            <div id="relative"> ejemplo relative </div>
+        </article> 
+            
+        <article>
+            
+                <h3>Absolute</h3>
+                <div>
+                    Al indicar un posicionamiento absoluto es posible colocar una caja en una coordenada concreta sin importar el posicionamiento del resto de cajas. < br >Es posible que una caja esté encima de otra.
+                    < br > Un ejemplo es el caso de la chincheta lila (que hay en la parte superior de esta misma página), que se coloca por encima de otras cajas, pero que al mover el scroll de la página se mueve como el resto de elementos.
+                </div>
+                <div class="contenedor"> 
+                    <div id="absolute"> ejemplo absolute </div>
+                </div>
+        </article>
+
+        <article>
+            <h3>Fixed</h3>
+            <div>
+                Tiene las mismas características que el posicionamiento absoluto, pero con la diferencia de que al mover el scroll del navegador la caja con posicionamiento fijo NO se moverá del lugar donde ha sido ubicada.
+                <br>Un ejemplo es la bandera (ubicada en la parte superior derecha de la pantalla), que está por encima del resto de elementos y se queda fija en la esquina superior derecha. Así, aunque movamos la barra de scroll o hagamos más pequeña la ventana del navegador no se mueve de esa posición.
+                <br>Otro ejemplo es el < footer > inferior de esta página, que está colocado fijo en la parte inferior de la ventana del navegador.
+            </div>
+
+            <div id="fixed"> ejemplo fixed </div>
+        </article>
+
+        <article>
+            <p>
+                Al definir el posicionamiento como absolute o como fixed es necesario indicar la posición o coordenada exacta en la que se desea ubicar la caja (o < div >).
+                < br >. Para ello podemos utilizar los siguientes valores:
+                
+                <li><b>left:</b> Especifica la coordenada horizontal, empezando a contar desde el extremo izquierdo.</li> 
+                <li><b>right:</b> Especifica la coordenada horizontal, empezando a contar desde el extremo derecho.</li> 
+                <li><b>top:</b> Especifica la coordenada vertical, empezando a contar desde el extremo superior.</li>  
+                <li><b>bottom:</b> Especifica la coordenada vertical, empezando a contar desde el extremo inferior.</li> 
+            </p>
+        </article>
+    </section>
+    
+    <aside>
+        <h3>Links</h3>
+        <p> Ir a otra pagina </p>
+    </aside>
+
+    <footer>
+        <p> Contactos con: Emily Muñoz </p>
+    </footer>
+</body>
+</html>

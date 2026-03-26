@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transformacion</title>
+    <link rel="stylesheet" href="CSS/estilo1.css">
+
+</head>
+
+<body>
+    <header>
+        <h1>Tutorial HTML5 CSS</h1>
+    </header>
+    <nav>
+        <ul>    
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="bordes.html">Bordes</a></li>
+            <li><a href="sombras.html">Sombras</a></li>
+            <li><a href="imagenes.html">Imagenes</a></li>
+            <li><a href="posicion.html">Posicion</a></li>
+            <li><a href="transformacion.html">Transformacion</a></li>
+            <li><a href="formularios.html">Formularios</a></li>
+            <li><a href="iframe.html">Iframes</a></li>
+            <li><a href="transiciones.html">Transiciones</a></li>
+            <li><a href="columnas.html">Columnas</a></li>
+            <li><a href="video.html">Video</a></li>
+            <li><a href="audio.html">Audio</a></li>
+            <li><a href="transpariencia.html">Transpariencias</a></li>
+            <li><a href="animacion.html">Animacion</a></li>
+            <li><a href="SVG.html">SVG</a></li>
+            <li><a href="responsive.html">Responsive</a></li>
+            <li><a href="contenidoeditable.html">Contenido Editable</a></li>
+            <li><a href="storage.html">Storage</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <h2>Transformacion</h2>
+        <article>
+            <p>Con HTML5 y CSS3 podemos utilizar la propiedad 'transform' para modificar características de un
+                < div> como la posición (position), la rotación (rotation), la escala (scale) o el -menos utilizado- el
+                    sesgo (skew).
+                    < br > Este cambio de posición, tamaño o rotación se produce al instante (no hay animación en este cambio,
+                    para ello habría que utilizar 'transition' o 'animation').
+            </p>
+
+            <div>
+                <img src="imagenes/martillo.png" alt="transformacion" width="300px">
+                <div>
+                    <p> A este < div> le vamos a aplicar todas las transformaciones de posición, rotación, escala y
+                            sesgo, partiendo
+                            de esta posición, tamaño, escala y apariencia original.
+                    </p>
+                    <p>Es muy importante tener en cuenta que para que 'transform' funcione en todos los navegadores
+                        deberemos repetir las propiedades anteponiendo los prefijos de cada uno de los navegadores:<br>
+                        <b>-webkit-</b> (para Chrome y Safari)<br>
+                        <b>-moz-</b> (para Firefox).<br>
+                        <b>-o-</b> (para Opera)<br>
+                        <b>-ms-</b> (para versiones modernas de Internet Explorer).
+                    </p>
+                </div>
+            </div>
+        </article>
+
+        <article>
+            <h2>Desplazamiento (translate)</h2>
+            <p>El movimiento se basa en la suma o resta de píxeles en su posición horizontal y vertical respecto a la
+                posición en la que se encuentra el objeto en este momento.<br>
+                Con números positivos se desplaza el objeto hacia la derecha y hacia abajo y con números negativos se
+                desplaza hacia arriba y hacia la izquierda. Así, en este ejemplo, el < div> del martillo se desplaza 200
+                píxeles hacia la derecha y 5 píxeles hacia
+                abajo respecto a su posición original.</p>
+                
+                    <br><p>#martillo{<br>
+                    transform:translate(200px,5px);<br>
+                    }</p>
+            <div>
+                <img src="imagenes/martillo.png" alt="transformacion" width="300px" id="martillo">
+            </div>
+
+            <p>También es posible utilizar porcentajes, si queremos colocar este martillo en la mitad horizontal de la
+                pantalla (osea 'centrar el martillo horizontalmente') podemos indicar un porcentaje (50%), en vez de
+                utilizar píxeles.</p>
+                
+                <br><p>#martillo2{<br>
+                    transform:translate(50%,5px);<br>
+                    }</p>
+
+                <img src="imagenes/martillo.png" alt="transformacion" width="300px" id="martillo2">
+        </article>
+
+        <article>
+            <h2>Rotación (rotate)</h2>
+            <p>La rotación se basa en los grados de rotación (de 0º a 360º). El eje de rotación siempre está situado en
+                el centro del
+            <div> y los grados se especifican añadiendo 'deg' después del valor (por ejemplo: 90deg).<br>
+                Si se indican valores positivos en los grados de rotación, el objeto rota hacia la derecha. Con los
+                grados especificados en números negativos, el objeto rota hacia la izquierda. (Así, teniendo en cuenta
+                que una vuelta entera equivale a 360º, se aprecia el mismo resultado con 350deg, que con -10deg).
+                </p>
+                    
+                <br><p>#martillo3{<br>
+                    transform:rotate(90deg);<br>
+                    }</p>
+                <img src="imagenes/martillo.png" alt="transformacion" width="300px" id="martillo3">
+        
+        </article>
+
+        <article>
+            <h2>Escala (scale)</h2>
+            <p>La escala de un objeto se basa en una escala horizontal, seguida de la vertical, siendo 1 la escala
+                original (correspondiente al tamaño original).
+                Para obtener un porcentaje se puede multiplicar el valor indicado por 100, así un valor de '2'
+                (2x100=200) representaría un 200%, osea el doble de tamaño.<br>
+                Aumenta o disminuye de tamaño tomando como eje el centro del < div>.</p>
+            
+                <br>#martillo{<br>
+                transform:scale(2,1.75);<br>
+                }
+
+            <br><br>
+            <img src="imagenes/martillo.png" alt="transformacion" width="200px" id="martillo4">
+            <br><br><p>En este caso, el < div> del martillo aumenta de tamaño no proporcionalmente. Aumenta el doble de anchura
+                    (2x100= 200%) y tan solo un 175% de altura (1.75x100= 175%).</p>
+        </article>
+
+        <article>
+            <h2>Sesgo (skew)</h2>
+            <p>Para definir el sesgo se indica primero el sesgo horizontal y posteriormente el vertical.
+                Se pueden utilizar valores o positivos según se requiera para la deformación.</p>
+            
+                <br>#martillo{<br>
+                transform:skew(10,25);<br>
+                }
+
+            <br><img src="imagenes/martillo.png" alt="transformacion" width="300px" id="martillo5">
+        </article>
+
+        <article>
+            <h2>Múltiples transformaciones simultáneas</h2>
+            <p>Se pueden indican tantas transformaciones como se deseen de manera simultáneamente separando cada una de
+                ellas por un espacio.</p>
+           
+                #martillo{<br>
+                transform:translate(200px, 0px) rotate(33deg) scale(0.5,0.5);<br>
+                }
+            <br><img src="imagenes/martillo.png" alt="transformacion" width="300px" id="martillo6">
+            <br><p>En este ejemplo, al < div > del martillo se le aplica un desplazamiento hacia la derecha de 200 píxeles, al mismo tiempo una
+                rotación hacia la derecha de 33 grados y finalmente una redución de tamaño proporcional del 50%.</p>
+        </article>
+
+        <article>
+            <h2>Compatibilidad con todos los navegadores</h2>
+            <p>Para que estas transformaciones funcionen en todos los navegadores tenemos que repetir el código, anteponiendo los prefijos 
+                correspondientes a cada uno de los navegadores (-webkit-, -moz-, -ms- y -o-).</p>
+            <pre>
+                #martillo{
+                    -transform:translate(200px, 0px) rotate(33deg) scale(0.5,0.5);
+                    -webkit-transform:translate(200px, 0px) rotate(33deg) scale(0.5,0.5);
+                    -moz-transform:translate(200px, 0px) rotate(33deg) scale(0.5,0.5);
+                    -o-transform:translate(200px, 0px) rotate(33deg) scale(0.5,0.5);
+                    -ms-transform:translate(200px, 0px) rotate(33deg) scale(0.5,0.5);            
+                }        
+            </pre>    
+        </article>
+    </section>
+
+    <aside>
+        <h3>Links</h3>
+        <p> Ir a otra pagina </p>
+    </aside>
+
+    <footer>
+        <p> Contactos con: Emily Muñoz </p>
+    </footer>
+</body>
+</html>

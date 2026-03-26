@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sombras</title>
+    <link rel="stylesheet" href="CSS/estilo1.css">
+</head>
+<body>
+    <header>Tutorial CSS Sombras</header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="bordes.html">Bordes</a></li>
+            <li><a href="sombras.html">Sombras</a></li>
+            <li><a href="imagenes.html">Imagenes</a></li>
+            <li><a href="posicion.html">Posicion</a></li>
+            <li><a href="transformacion.html">Transformacion</a></li>
+            <li><a href="formularios.html">Formularios</a></li>
+            <li><a href="iframe.html">Iframes</a></li>
+            <li><a href="transiciones.html">Transiciones</a></li>
+            <li><a href="columnas.html">Columnas</a></li>
+            <li><a href="video.html">Video</a></li>
+            <li><a href="audio.html">Audio</a></li>
+            <li><a href="transpariencia.html">Transpariencias</a></li>
+            <li><a href="animacion.html">Animacion</a></li>
+            <li><a href="SVG.html">SVG</a></li>
+            <li><a href="responsive.html">Responsive</a></li>
+            <li><a href="contenidoeditable.html">Contenido Editable</a></li>
+            <li><a href="storage.html">Storage</a></li>
+        </ul>
+    </nav>
+    <section>
+        <h2>Sombras de < div > (cajas)</h2>
+        <article>
+            <h3>Ejemplo</h3>
+            <div id="sombra">
+                Con HTML5 podemos crear de una manera sencilla tanto sombras para zonas del HTML (< div >, < article >, < footer >, < header >...), como para textos. Aunque cada uno de estos tipos de sombra tiene su propia etiqueta, la sintaxis sigue la misma lógica.
+                Así, en el caso de la sombra aplicada a < div >, zonas o secciones del html utilizamos la propiedad box-shadow.
+            </div>
+
+            <h4>Sombras internas</h4>
+            <p>
+               Para crear sombras internas únicamente
+               tenemos que añadir el valor inset al final de 
+               'box-shadow':</p>
+
+            <div id="interna">
+                Sombra interna
+            </div>
+            <ul>
+                <li>(7px), indica el número de pixeles que se desviará la sombra horizontalmente.</li>
+                <li>(20px), especofoca el número de píxeles que se moverá la sombra verticalmente.</li>
+                <li>(10px), es la suavidad que tendrá la sombra (a menor valor más duro será el borde)</li>
+                <LI>color</LI>
+            </ul>
+        </article>
+
+        <h2>Creación de 'halos' o 'resplandores'</h2>
+        <article>
+            <p>Para crear un halo o resplandor que rodee una caja o el < div >
+                que corresponda indicamos '0px' en los dos primeros valores y 
+                especificamos el color del resplandor.</p>
+            <h3>Ejemplo</h3>
+            <div id="halo">
+                <p>section{
+                        box-shadow: 0px 0px 30px blue;
+                    }</p>
+            </div>    
+        </article>
+
+        <h2>Sombras en textos</h2>
+        <article>
+            <p>En el caso de las sombras en textos utilizamos la etiqueta 'text-shadow', que funciona exactamente igual que 'box-shadow':</p>
+            <h3>Ejemplo</h3>
+            <p id="sombra">Cualquier Burrada</p>
+        </article>
+
+        <h2>Múltiples sombras en el mismo elemento</h2>
+        <article></article>
+    </section>    
+
+    <aside>
+        <h3>Links</h3>
+        <p> Ir a otra pagina </p>
+    </aside>
+
+    <footer>
+        <p> Contactos con: Emily Muñoz </p>
+    </footer>
+</body>
+</html>
