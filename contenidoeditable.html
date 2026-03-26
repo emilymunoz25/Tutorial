@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contenido Editable</title>
+    <link rel="stylesheet" href="CSS/estilo1.css">
+
+</head>
+
+<body>
+    <header>
+        <h1>Tutorial HTML5 CSS</h1>
+    </header>
+    <nav>
+        <ul>    
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="bordes.html">Bordes</a></li>
+            <li><a href="sombras.html">Sombras</a></li>
+            <li><a href="imagenes.html">Imagenes</a></li>
+            <li><a href="posicion.html">Posicion</a></li>
+            <li><a href="transformacion.html">Transformacion</a></li>
+            <li><a href="formularios.html">Formularios</a></li>
+            <li><a href="iframe.html">Iframes</a></li>
+            <li><a href="transiciones.html">Transiciones</a></li>
+            <li><a href="columnas.html">Columnas</a></li>
+            <li><a href="video.html">Video</a></li>
+            <li><a href="audio.html">Audio</a></li>
+            <li><a href="transpariencia.html">Transpariencias</a></li>
+            <li><a href="animacion.html">Animacion</a></li>
+            <li><a href="SVG.html">SVG</a></li>
+            <li><a href="contenidoeditable.html">Contenido Editable</a></li>
+            <li><a href="storage.html">Storage</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <h2>Ejemplo práctico</h2>
+        <article>
+            <p>Para que un contenido sea editable (es decir, para que el usuario pueda modificar, eliminar o añadir
+                texto) desde el propio navegador, dicho texto tiene que estar ubicado dentro de un
+                < div> o de una etiqueta semántica (article, section...) con la propiedad 'contenteditable=true':
+            </p><br>
+            <div id="diContenido">
+                <pre>
+                    < section id="editable" contenteditable="true">
+                    < h2 >Escribe tu pedido:< /h2 >
+                        < ul >
+                            < li > 2 bolsas de patatas< /li >  
+                            < li > 1 dónut< /li >   
+                            < li > 4 Kg. de boniatos< /li >    
+                        < /ul >       
+                    < /section >    
+                </pre>
+                                                          
+            </div>
+            <p>El resultado del código anterior (añadiendo algo de código CSS) es el siguiente:</p>
+            <section id="editable" contenteditable="true">
+                <h4>Escribe tu pedido:</h4>
+                <ul>
+                    <li>2 bolsas de patatas</li>
+                    <li>1 dónut</li>
+                    <li>4 Kg. de boniatos</li>
+                </ul>
+            </section>
+
+            <p>Haz clic en el cuadro superior y modifica, elimina, añade líneas de texto o modifica el título.
+                Si añades más elementos de los que caben dentro de la lista aparecerá un scroll vertical, que se produce
+                gracias a este código CSS:</p>
+            <div id="diContenido">
+                #editable{<br>
+                overflow:auto;<br>
+                }
+            </div>
+        </article>
+    </section>
+
+    <section>
+        <h2>Pregunta del millon</h2>
+        <p>Después de editar el contenido de un < div >, puedes obtener los cambios realizados por el usuario utilizando
+            JavaScript o jQuery. Por ejemplo, al modificar el texto y pulsar un botón, el navegador puede capturar ese contenido y mostrarlo en una ventana de alerta.</p>
+        
+        <button onclick="alert(document.getElementById('editable').innerText)">
+            Leer el contenido
+        </button>
+
+        <p>El código de este botón es el siguiente, donde 'ejemplo' es el id del
+            < div > donde hemos escrito..
+        </p><br>
+
+        <div id="diContenido">
+            < button onclick=" alert ( document.getElementByid('ejemplo').innerText )"><br>
+                Leer el contenido
+                < /button   >
+        </div>
+    </section>
+
+    <aside>
+        <h3>Links</h3>
+        <p> Ir a otra pagina </p>
+    </aside>
+
+    <footer>
+        <p> Contactos con: Emily Muñoz </p>
+    </footer>
+</body>    
+</html>

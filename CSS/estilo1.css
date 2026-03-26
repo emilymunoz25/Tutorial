@@ -544,3 +544,89 @@ th,td {
     position: relative;
     flex: 1;
 }
+
+/*Animacion*/
+
+#diAnimacion{
+    width: 850px;
+    height: auto;
+    padding: 10px;
+    background-color: #bebebed3;
+    border: 1px solid #67676b;
+    border-radius: 5px;
+}
+
+li{
+    padding: 0px 0px 0px 30px;
+    list-style: none;
+}
+
+#martillo{
+    width: 100px;
+    animation: animacion_martillo 2s;
+    position: relative;
+    animation-iteration-count: infinite;
+}
+
+@keyframes animacion_martillo {
+  0% {
+    transform: rotate(0deg);
+    top:0px
+  }
+  42% {
+    transform: rotate(90deg);
+    top:57px
+  }
+  60% {
+    transform: rotate(90deg);
+    top:57px
+  }
+  100% {
+    transform: rotate(0deg);
+    top:0px
+  }
+}
+
+/*SVG*/
+
+#bandera1, #bandera2,
+#bandera3, #bandera4,
+#bandera5, #bandera6{
+    float: left;
+    padding-right: 12px;
+    padding-left: 5px;
+}
+
+#columnasvg{
+    column-count: 2;
+    column-gap: 20px;
+    column-rule: 3px  gray;
+}
+
+#diSVG{
+    width: 850px;
+    height: auto;
+    padding: 10px;
+    background-color: #bebebed3;
+    border: 1px solid #67676b;
+    border-radius: 5px;
+}
+
+/*Contenido editable*/
+
+#editable{
+    width: 500px;
+    height: 200px;
+    background-color: #b1f0c8;
+    border: 1px solid #52ca7e;
+    overflow: auto;
+}
+
+#diContenido{
+    width: 850px;
+    height: auto;
+    padding: 10px;
+    background-color: #bebebed3;
+    border: 1px solid #67676b;
+    border-radius: 5px;
+}

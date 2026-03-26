@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animacion</title>
+    <link rel="stylesheet" href="CSS/estilo1.css">
+    
+</head>
+<body>
+    <header>
+        <h1>Tutorial HTML5 CSS</h1>
+    </header>
+    <nav>
+        <ul>    
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="bordes.html">Bordes</a></li>
+            <li><a href="sombras.html">Sombras</a></li>
+            <li><a href="imagenes.html">Imagenes</a></li>
+            <li><a href="posicion.html">Posicion</a></li>
+            <li><a href="transformacion.html">Transformacion</a></li>
+            <li><a href="formularios.html">Formularios</a></li>
+            <li><a href="iframe.html">Iframes</a></li>
+            <li><a href="transiciones.html">Transiciones</a></li>
+            <li><a href="columnas.html">Columnas</a></li>
+            <li><a href="video.html">Video</a></li>
+            <li><a href="audio.html">Audio</a></li>
+            <li><a href="transpariencia.html">Transpariencias</a></li>
+            <li><a href="animacion.html">Animacion</a></li>
+            <li><a href="SVG.html">SVG</a></li>
+            <li><a href="contenidoeditable.html">Contenido Editable</a></li>
+            <li><a href="storage.html">Storage</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <h2>Animation</h2>
+        <article>
+            <p>De una manera parecida a las transiciones, pero con una mayor potencialidad, en HTML5 tenemos a nuestra disposición las animaciones (animation).
+            <br>Para empezar con algo sencillo, primero vamos a hacer paso a paso que el martillo (creado en SVG) -y que ya hemos utilizado en otros temas- gire al colocar el cursor encima.</p>
+        </article>
+
+        <article>
+            <h2> Paso a paso</h2>
+            <div>
+                <h3>1. Creamos el objeto a animar</h3>
+                <p>Primero, creamos dentro de un < div>  el objeto, imagen o texto que realizará la animación (en este caso, el martillo).
+                    <br>Así, dentro de la página html, creamos un < div> llamado martillo y dentro creamos un dibujo SVG del martillo que rotará.
+                </p>
+                <div id="diAnimacion">
+                    < div id="martillo"><br>
+                        < svg width="120" height="190" xmlns="http://www.w3.org/2000/svg")> <br>
+                        < rect x="43" y="10" width="14" height="160" rx="6" ry="5" fill="#895111"/> <br>
+                        < rect x="43" y="10" width="14" height="160" rx="6" ry="5" fill="#895111"/> <br>
+                        < rect x="45" y="15" width="4" height="150" rx="6" ry="6" fill="#A68661"/> <br>
+                        < rect x="10" y="22" width="80" height="45" rx="14" ry="12" fill="#6E6E5F"/> <br>
+                        < rect x="20" y="37" width="62" height="24" rx="6" ry="6" fill="#898982"/> <br>
+                        < rect x="20" y="25" width="62" height="6" rx="4" ry="4" fill="#C2C2B6"/> <br>
+                        < rect x="43" y="67" width="14" height="9" fill="#482907"/> <br>
+                        < /svg> <br>   
+                    < /div> 
+                </div>
+                
+            </div>
+            <div><br>
+                <h3>2. Establecemos la animación</h3>
+                <p>Seguidamente, en el código CSS, vamos a incluir dos cosas.
+                    Por una parte, en el selector del < div> donde está el martillo, indicamos qué animación tendrá que reproducir, 
+                    indicando un nombre y la duración de la animación expresada en segundos (entre otras propiedades opcionales que a continuación veremos).</p>
+                
+                <div id="diAnimacion">
+                    #martillo {
+                        animation:animacion_martillo 2s;
+                    }  
+                </div>
+
+                <p>El nombre de la animación (animación_martillo) y la duración (2s) son valores obligatorios, pero existen valores opcionales que nos permiten personalizar la animación, como son:</p><br>        
+                
+                    <b>animation-timing-function :</b> Define el tipo de (easing) aceleración que tendrá la animación.
+                    <li><b>linear:</b> la velocidad es siempre la misma durante toda la animación.</li>
+                    <li><b>ease:</b> la animación comienza lenta, después rápida y acaba lento.</li>
+                    <li><b>ease-in:</b> (aceleración) la animación empieza lenta y va acelerándose progresivamente.</li>
+                    <li><b>ease-out:</b> (deceleración) la animación empieza rápida y va decelerando progresivamente.</li>
+                    <li><b>ease-in-out:</b> la animación empieza y acaba lenta y en el recorrido central va rápida.</li>
+
+                    <br>
+                    <b>animation-iteration-count:</b>Indica el número de veces que se repetirá la animación.
+                    <li><b>infinite:</b>la animación se repite indefinidamente.</li>
+                    <li><b>número de repeticiones:</b> se repite el número de veces indicado (por defecto es 1).</li>
+
+                    <br>
+                    <b>animation-direction:</b> Establece la dirección de la animación.
+                    <li><b>normal:</b> la animación se reproduce siempre tal y como la hemos definido.</li>
+                    <li><b>lternate:</b> primero se reproduce en la dirección definida y posteriormente al revés (y así sucesivamente).</li>
+
+                    <br>
+                    <b>animation-delay:</b> Indica si existe retardo (o tiempo de espera) para que se inicie la animación.
+                    <li><b>número de segundos de espera:</b> El número de segundos seguido de "s".</li>
+
+                    <br>
+                    <b>animation-fill-mode:</b> Indica cómo se quedará el elemento que realiza la animación cuándo ésta finalice.
+                    <li><b>none:</b> Al acabar la animación se aplicarán los estilos CSS normales que tenga el propio elemento animado.</li>
+                    <li><b>forwards:</b> Cuando acabe la animación, el elemento se quedará tal y como acabó la animación (especificadas en el 100%).</li>
+                    <li><b>backwards:</b> Al finalizar la animación, el elemento animado se quedará con las propiedades con las que empezó la animación (especificadas en el 0%).</li>
+                </p><br>
+
+                <p>Así, el ejemplo anterior podría estar complementado por estas propiedades: (Se podría escribir todo seguido, pero debido al número de valores y al orden existente para definirlos, posiblemente es más sencillo ir indicando las propiedades opcionales por separado):</p>
+                <br>
+                <div id="diAnimacion">
+                    #martillo {<br>
+                        animation:animacion_martillo 2s;<br>
+                        animation-timing-function: ease-out;<br>
+                        animation-iteration-count: infinite;<br>
+                        animation-direction: alternate;<br>
+                        animation-delay: 1s; <br>
+                    } <br>
+                </div>
+            </div>
+
+            <div><br>
+                <h3>3. Definimos cómo será la animación</h3>
+                <p>Igualmente, dentro del mismo código CSS, definimos en qué consistirá dicha animación, indicando el nombre 'animacion_martillo', que hemos creado en el paso anterior.</p>
+                
+                <div id="diAnimacion">
+                    @keyframes animacion_martillo { <br>
+                        0% { <br>
+                            transform: rotate(0deg); <br>
+                        } <br>
+                        50% { <br>
+                            transform: rotate(90deg); <br>
+                        } <br>
+                        100% { <br>
+                            transform: rotate(0deg); <br>
+                            } <br>
+                        } <br>
+                </div>
+            </div>
+        </article>
+
+        <article>
+            <h2>Ejemplo complejo</h2>
+            <div>
+                <p>
+                    El siguiente ejemplo es bastante más complejo, ya que se relacionan 2 animaciones, además de mejorar un poco la animación del martillo para que gire de una manera algo más natural y clave el clavo.
+                    <br>Al mismo tiempo, se ha utilizado el parámetro opcional infinite para que la animación se realice de manera cíclica.
+                    <p>PRIMERO CREAMOS EL MARTILLO</p>
+                    <div id="martillo"> 
+                        <svg width="120" height="190" xmlns="http://www.w3.org/2000/svg")>
+                            <rect x="43" y="10" width="14" height="160" rx="6" ry="5" fill="#895111"/>
+                            <rect x="43" y="10" width="14" height="160" rx="6" ry="5" fill="#895111"/>
+                            <rect x="45" y="15" width="4" height="150" rx="6" ry="6" fill="#A68661"/>
+                            <rect x="10" y="22" width="80" height="45" rx="14" ry="12" fill="#6E6E5F"/>
+                            <rect x="20" y="37" width="62" height="24" rx="6" ry="6" fill="#898982"/>
+                            <rect x="20" y="25" width="62" height="6" rx="4" ry="4" fill="#C2C2B6"/>
+                            <rect x="43" y="67" width="14" height="9" fill="#482907"/>
+                        </svg>
+                    </div>
+            <pre>
+                <div id="diAnimacion">
+                    #martillo{ 
+                        width: 100px;
+                        animation: animacion_martillo 2s; 
+                        position: relative; 
+                        animation-iteration-count: infinite; 
+                    }
+                </div>
+            </pre> 
+
+            <pre>
+                <div id="diAnimacion">
+                    @keyframes animacion_martillo {
+                        0% {
+                            transform: rotate(0deg);
+                            top:0px
+                        }
+                        42% {
+                            transform: rotate(90deg);
+                            top:57px
+                        }
+                        60% {
+                            transform: rotate(90deg);
+                            top:57px
+                        }
+                        100% {
+                            transform: rotate(0deg);
+                            top:0px
+                        }
+                    }
+                </div>
+            </pre>    
+                
+                <p>El martillo acaba de girar cuando la animación llega al 42% de su recorrido (no en el 50% como antes) y hasta el 60% no vuelve a subir (antes empezaba a subir inmediatamente después de llegar al 50%). Por lo que en este caso, el martillo queda rotado 90 grados un 18% de la animación
+                    <li>Así,al tratarse de una animación de 2 segundos:</li>
+                    <li>El martillo baja en 0.84 segundos (del 0% al 42%)</li>
+                    <li>Permanece rotado durante 0.36 segundos (del 42% al 60%)</li>
+                    <li>Vuelve a su posición inicial en 0.80 segundos (del 60% al 100%)</li></p>
+                </div>
+        </article>
+    </section>
+
+    <aside>
+        <h3>Links</h3>
+        <p> Ir a otra pagina </p>
+    </aside>
+
+    <footer>
+        <p> Contactos con: Emily Muñoz </p>
+    </footer>
+</body>
+</html>
