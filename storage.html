@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storage</title>
+    <link rel="stylesheet" href="CSS/estilo1.css">
+
+<script type="text/javascript">
+   if (localStorage.veces==undefined){
+      localStorage.veces=1;
+   } else {
+      localStorage.veces=Number(localStorage.veces)+1;
+   }
+   document.write("Visitas: "+localStorage.veces+" veces.");
+</script>
+
+</head>
+
+<body>
+    <header>
+        <h1>Tutorial HTML5 CSS</h1>
+    </header>
+    <nav>
+        <ul>    
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="bordes.html">Bordes</a></li>
+            <li><a href="sombras.html">Sombras</a></li>
+            <li><a href="imagenes.html">Imagenes</a></li>
+            <li><a href="posicion.html">Posicion</a></li>
+            <li><a href="transformacion.html">Transformacion</a></li>
+            <li><a href="formularios.html">Formularios</a></li>
+            <li><a href="iframe.html">Iframes</a></li>
+            <li><a href="transiciones.html">Transiciones</a></li>
+            <li><a href="columnas.html">Columnas</a></li>
+            <li><a href="video.html">Video</a></li>
+            <li><a href="audio.html">Audio</a></li>
+            <li><a href="transpariencia.html">Transpariencias</a></li>
+            <li><a href="animacion.html">Animacion</a></li>
+            <li><a href="SVG.html">SVG</a></li>
+            <li><a href="contenidoeditable.html">Contenido Editable</a></li>
+            <li><a href="storage.html">Storage</a></li>
+        </ul>
+    </nav>
+    <section>
+        <h2>Tipos de datos guardados</h2>
+        <article>
+            <div>
+                <p>Como hemos visto con el ejemplo anterior, con HTML5 ya es posible guardar datos (locales) en el ordenador del usuario sin limitación de tiempo, sin que estos datos se borren en cada sesión, con una limitación de tamaño de hasta 5 Mb, sin tener que disponer de ningún servidor, ni base de datos y sin tener que utilizar cookies.
+                    <br>Existen dos tipos de almacenamiento (de corta y larga duración):
+                </p>  
+                
+                <li><b>sessionStorage:</b> Los datos guardados permanecen mientras el usuario tiene el navegador abierto. Al cerrar el navegador los datos se borran automáticamente.</li>
+                <li><b>localStorage:</b> Los datos guardados permanecen siempre, incluso si se cierra el navegador y se apaga el ordenador.</li>
+                
+                <br><p>
+                    Es importante señalar que la información guardada es accesible sólo desde el mismo navegador que ha guardado los datos. 
+                    Es decir, el localStorage de Chrome es diferente al localStorage de Opera o de Firefox. 
+                    Por lo que se si guardan unos determinados datos desde Chrome, al acceder a la misma página con -por ejemplo- Firefox únicamente se podrán leer los datos guardados desde Firefox, no los generados desde Chrome.
+                </p>
+            </div>
+        </article>
+
+        <article>
+            <h2>Las palabras mágicas</h2><br>
+            <div>
+                <p>Aunque la utilización de localStorage es bastante sencilla hay que tener en cuenta que funciona bajo javaScript, por lo que el código correspondiente lo tendremos que colocar dentro del < head>, entre estas dos etiquetas:</p>
+                <div id="diStorage">
+                    <pre>
+                        script type="text/javascript" >
+                    < /script >
+                </pre>
+                </div><br>
+
+                <h3>Guardar un dato </h3>
+                <p>Para guardar un valor tenemos que proporcionar 3 dato:</p>
+                
+                <li><b>localStorage</b> (si los datos serán permanentes) o <b>sessionStorage </b> (si los datos se borrarán cuando el usuario cierre el navegador).</li>
+                <li><b>Un nombre</b> que le daremos a esa información (este valor sólo sirve para poder hacer referencia a ella).</li>
+                <li><b>La información </b> a guardar (normalmente escrita entre comillas).</li>
+
+                <br><h4>Ejemplo</h4>
+                <div id="diStorage">
+                    <pre>
+                        localStorage.nombre='Javier';
+                    </pre>
+                </div><br>
+                <p>Este código <b>guarda permanentemente</b> el dato "javier" dentro del dato llamado <b>nombre</b></p>
+
+                <h3>Recuperar la información</h3>
+                <p>Para leer o recuperar la información necesitamos también 3 datos:</p>
+                
+                <li><b>localStorage</b> (si los datos eran permanentes) o <b>sessionStorage </b> (si los datos tenían sólo vigencia dentro de la presente sesión).</li>
+                <li><b>El nombre</b> que le dimos a esa información cuando se guardó.</li>
+                <li><b>Una variable </b> donde guardar dicha información (o en su defecto un alert que muestre en pantalla dicha información).</li>
+
+                <br><h4>Ejemplo</h4>
+                <div id="diStorage">
+                    <pre>
+                        alert('La información recuperada ha sido '+ localStorage.nombre);
+                    </pre>
+                </div><br>
+                <p><b>alert</b> sirve para que aparezca una ventana flotante de alerta con un texto que será 'La información recuperada ha sido <b>más</b> la información llamada nombre guardada en localStorage.</p>
+
+                <br><h3>Eliminar un dato</h3>
+                <p>Para eliminar únicamente un dato utilizamos la orden <b>localStorage.removeItem()':</b></p>
+                
+                <br><h4>Ejemplo</h4>
+                <div id="diStorage">
+                    <pre>
+                        localStorage.removeItem('nombre');
+                    </pre>
+                </div><br>
+                <p>En este caso eliminamos los datos (en este ejemplo de carácter permanente) llamados como <b>nombre</b>.</p>
+
+                <br><h3>Eliminar todos los datos existentes</h3>
+                
+                <h4>Ejemplo</h4>
+                <div id="diStorage">
+                    <pre>
+                        localStorage.clear();
+                        sessionStorage.clear();
+                    </pre>
+                </div><br>
+                <p>Con este código eliminamos todos los datos, tantos permanentes como los que tienen vigencia dentro de la presente sesión del navegador.</p>
+
+                <br><h3>Para conocer cuántos datos hay guardados...</h3>
+                <p>Ya, para rizar el rizo, podemos conocer cuántos elementos (permanentes o no) hay guardados utilizando el atributo <b>.length</b> .</p>
+                
+                <h4>Ejemplo</h4>
+                <div id="diStorage">
+                    <pre>
+                        alert('Hay ' + localStorage.length + 'elementos guardados');
+                    </pre>
+                </div><br>
+            </div>
+        </article>
+
+        <article>
+            <h2>Ejemplo práctico paso a paso</h2>
+            <p>
+                Como con sólo conocer por encima el código no hacemos gran cosa, vamos a construir paso a paso el siguiente ejemplo.
+                <br>Se trata de un contador que va contando las veces que hemos entrado en esta página con este navegador .
+                <br>(Recarga varias veces la página para comprobar como este contador va incrementándose, incluso si cierras el navegador y lo sigues intentando mañana).
+                
+            </p>
+            <br><p>
+                Dentro del < head>, añadimos el siguiente código: <br>
+                <div id="diStorage">
+                <pre>
+                    script type="text/javascript">
+                        if (localStorage.veces==undefined){
+                            localStorage.veces=1;
+                        } else {
+                            localStorage.veces=Number(localStorage.veces)+1;
+                        }
+                    document.write("Visitas: "+localStorage.veces+" veces.");
+                    < /script>                        
+                </pre>
+                </div>
+
+            <br><p>
+                Como queremos que la información sea permanente (que no se borre cuando cerremos el navegador) utilizamos siempre 'localStorage'.
+                <br>La información tiene que tener un nombre, así que por no llamarla 'Fulgencia' o 'Remigio', hemos decido llamarla 'veces' (ya que lo único que vamos a guardar es un número, que será el número de veces que se ha entrado en la página).
+                <br>Por lo tanto para acceder (para leer o guardar) esta información en vez de gritar 'Fulgencia' o 'Remigio' lo haremos utilizando la palabra: <b>localStorage.veces</b> .
+            </p>
+
+        </article>
+    </section>
+    <section>
+        <h2>Expliación</h2>
+        <article>
+            <div>
+                <div id="diStorage">
+                    <pre>
+                        if (localStorage.veces==undefined){                     
+                    </pre>
+                </div>
+                <p>La traducción al castellano actual sería: si este dato tiene un valor no definido (undefined), es decir; si no existe. Deducimos que si no existe quiere decir que es la primera vez que se ha accedido a esta página...</p>
+                <br>
+
+                <div id="diStorage">
+                    <pre>
+                        localStorage.veces=1;                    
+                </pre>
+                </div>
+                <p>Si se cumple la condición anterior escribirá un 1 dentro del dato llamado localStorage.veces (que recordamos que estaba vacío).</p>
+                <br>
+            
+                <div id="diStorage">
+                    <pre>
+                        } else {
+                            localStorage.veces = Number(localStorage.veces)+ 1;                    
+                    </pre>
+                </div>
+
+                <p>Sino (es decir, si el dato 'NO es undefined', que es lo mismo que decir, si el dato 'tiene algún valor')</p>
+                <br><p>Entonces le sumará 1 al valor que tenga localStorage.veces en ese momento.
+                    <br>El 'Number' que hay enmedio de la línea no es para complicar más aún la lectura (como algunos están pensando). Sirve para que sume 1 y no añada 1, 
+                    ya que si a 1 se le añade 1 el resultado es 11 (cosa que no nos interesa), pero si a 1 se le suma 1 el resultado es 2 (que es lo que queremos que realmente ocurra).</p>
+                <br>
+
+                <div id="diStorage">
+                    <pre>
+                        document.write("Visitas: "+localStorage.veces+" veces.");                  
+                    </pre>
+                </div>
+                <p>Finalmente escribe en el documento (osea en la página web) el texto "Visitas: " seguido del dato que ha leído en líneas anteriores y después le añade "veces." para que muestre algo así como "Visitas: 2 veces".</p>   
+            </div>
+        </article>
+    </section>
+
+    <aside>
+        <h3>Links</h3>
+        <p> Ir a otra pagina </p>
+    </aside>
+
+    <footer>
+        <p> Contactos con: Emily Muñoz </p>
+    </footer>
+</body>
+</html>

@@ -630,3 +630,23 @@ li{
     border: 1px solid #67676b;
     border-radius: 5px;
 }
+
+/*Storage*/
+
+li{
+    padding: 0px 0px 0px 30px;
+    list-style: none; 
+}
+
+b{
+    color: rgb(86, 139, 192);
+}
+
+#diStorage{
+    width: 850px;
+    height: auto;
+    padding: 10px;
+    background-color: #bebebed3;
+    border: 1px solid #67676b;
+    border-radius: 5px;
+}
