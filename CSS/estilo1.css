@@ -344,3 +344,203 @@ aside p{
     padding-left: 100px;
     padding-top: 20px;
 }
+
+/*Columnas*/
+
+
+#columnas{
+    column-count: 4;
+    column-gap: 50px;
+    column-rule: 5px inset gray;
+}
+
+#columnas2{
+    column-count: 4;
+    column-gap: 30px;
+    column-rule: 4px dotted black;
+    list-style: none;
+}
+
+#di{
+    width: 850px;
+    height: auto;
+    padding: 10px;
+    background-color: #bebebed3;
+    border: 1px solid #67676b;
+    border-radius: 5px;
+}
+
+/*Audio*/
+
+table{
+    border-collapse: separate;
+    border-spacing: 8px;
+    font-family: Arial, sans-serif;
+}
+
+th,td {
+    padding: 5px 8px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#th {
+    background-color: #383c94;
+    border: 1px solid #25073d;
+    color: white;
+    font-weight: bold;
+}
+
+#diAudio{
+    width: 600px;
+    height: auto;
+    padding: 10px;
+    background-color: #dadada;
+    border: 1px solid #302f70;
+    border-radius: 5px;
+}
+
+/*Transparencias*/
+
+#cuadro1{
+    width: 100px;
+    height: 30px;
+    background-color: rgba(255, 0, 0, 0.4);
+}
+
+#cuadro2{
+    width: 100px;
+    height: 30px;
+    background-color: red;
+}
+
+#degradado1{
+    width: 400px;
+    height: 80px;
+    border-radius: 3px;
+    background: linear-gradient(top, red, gold);
+    background: -webkit-linear-gradient(top, red, gold);
+    background: -moz-linear-gradient(top, red, gold);
+    background: -o-linear-gradient(top, red, gold);
+    background: -ms-linear-gradient(top, red, gold);
+}
+
+#degradado2{
+    width: 400px;
+    height: 80px;
+    border-radius: 3px;
+    background: linear-gradient(30deg, crimson, sienna, royalblue, indianred, purple);
+    background: -webkit-linear-gradient(30deg, crimson, sienna, royalblue, indianred, purple);
+    background: -moz-linear-gradient(30deg, crimson, sienna, royalblue, indianred, purple);
+    background: -o-linear-gradient(30deg, crimson, sienna, royalblue, indianred, purple);
+    background: -ms-linear-gradient(30deg, crimson, sienna, royalblue, indianred, purple);
+}
+
+#degradado3{
+    width: 400px;
+    height: 80px;
+    border-radius: 3px;
+    background: linear-gradient(top, black 10%, orangered 75%, yellow);
+    background: -webkit-linear-gradient(top, black 10%, orangered 75%, yellow);
+    background: -moz-linear-gradient(top, black 10%, orangered 75%, yellow);
+    background: -o-linear-gradient(top, black 10%, orangered 75%, yellow);
+    background: -ms-linear-gradient(top, black 10%, orangered 75%, yellow);
+}
+
+#degradadoradial{
+    flex: 1;
+    height: 200px;
+    border-radius: 3px;
+    background: radial-gradient(100px 75px, circle closest-side, red, yellow, black);
+    background: -webkit-radial-gradient(100px 75px, circle closest-side, red, yellow, black);
+    background: -moz-radial-gradient(100px 75px, circle closest-side, red, yellow, black);
+    background: -o-radial-gradient(100px 75px, circle closest-side, red, yellow, black);
+    background: -ms-radial-gradient(100px 75px, circle closest-side, red, yellow, black);
+}
+
+#degradadoradial2{
+    flex: 1;
+    height: 200px;
+    border-radius: 3px;
+    background: radial-gradient(100px 75px, circle farthest-side, red, yellow, black);
+    background: -webkit-radial-gradient(100px 75px, circle farthest-side, red, yellow, black);
+    background: -moz-radial-gradient(100px 75px, circle farthest-side, red, yellow, black);
+    background: -o-radial-gradient(100px 75px, circle farthest-side, red, yellow, black);
+    background: -ms-radial-gradient(100px 75px, circle farthest-side, red, yellow, black);
+}
+
+#degradadoradial3{
+    flex: 1;
+    height: 200px;
+    border-radius: 3px;
+    background: radial-gradient(100px 75px, circle closest-corner, red, yellow, black);
+    background: -webkit-radial-gradient(100px 75px, circle closest-corner, red, yellow, black);
+    background: -moz-radial-gradient(100px 75px, circle closest-corner, red, yellow, black);
+    background: -o-radial-gradient(100px 75px, circle closest-corner, red, yellow, black);
+    background: -ms-radial-gradient(100px 75px, circle closest-corner, red, yellow, black);
+}
+
+#degradadoradial4{
+    flex: 1;
+    height: 200px;
+    border-radius: 3px;
+    background: radial-gradient(100px 75px, circle farthest-corner, red, yellow, black);
+    background: -webkit-radial-gradient(100px 75px, circle farthest-corner, red, yellow, black);
+    background: -moz-radial-gradient(100px 75px, circle farthest-corner, red, yellow, black);
+    background: -o-radial-gradient(100px 75px, circle farthest-corner, red, yellow, black);
+    background: -ms-radial-gradient(100px 75px, circle farthest-corner, red, yellow, black);
+}
+
+#degradado4{
+    width: 400px;
+    height: 80px;
+    border-radius: 3px;
+    background: radial-gradient(center center, circle, black, #1162ac);
+    background: -moz-radial-gradient(center center, circle, black, #1162ac);
+    background: -o-radial-gradient(center center, circle, black, #1162ac);
+    background: -ms-radial-gradient(center center, circle, black, #1162ac);
+    background: -webkit-radial-gradient(center center, circle, black, #1162ac);
+}
+
+#degradado5{
+    width: 400px;
+    height: 80px;
+    border-radius: 3px;
+    background: radial-gradient(150px top, ellipse, white, #1162ac, black);
+    background: -webkit-radial-gradient(150px top, ellipse, white, #1162ac, black);
+    background: -moz-radial-gradient(150px top, ellipse, white, #1162ac, black);
+    background: -o-radial-gradient(150px top, ellipse, white, #1162ac, black);
+    background: -ms-radial-gradient(150px top, ellipse, white, #1162ac, black);
+}
+
+#degradado6{
+    width: 400px;
+    height: 80px;
+    border-radius: 3px;
+    background: radial-gradient(center center, ellipse, white 25%, peru 66%, black 96%);
+    background: -webkit-radial-gradient(center center, ellipse, white 25%, peru 66%, black 96%);
+    background: -moz-radial-gradient(center center, ellipse, white 25%, peru 66%, black 96%);
+    background: -o-radial-gradient(center center, ellipse, white 25%, peru 66%, black 96%);
+    background: -ms-radial-gradient(center center, ellipse, white 25%, peru 66%, black 96%);
+}
+
+#diTransparencia{
+    width: 850px;
+    height: auto;
+    padding: 10px;
+    background-color: #bebebed3;
+    border: 1px solid #67676b;
+    border-radius: 5px;
+}
+
+.contenedordegradado{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 5px;
+}
+
+.caja{
+    position: relative;
+    flex: 1;
+}

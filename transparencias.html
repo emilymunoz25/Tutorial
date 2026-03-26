@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transparencias</title>
+    <link rel="stylesheet" href="CSS/estilo1.css">
+</head>
+
+<body>
+    <header>
+        <h1>Tutorial HTML5 CSS</h1>
+    </header>
+    <nav>
+        <ul>    
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="bordes.html">Bordes</a></li>
+            <li><a href="sombras.html">Sombras</a></li>
+            <li><a href="imagenes.html">Imagenes</a></li>
+            <li><a href="posicion.html">Posicion</a></li>
+            <li><a href="transformacion.html">Transformacion</a></li>
+            <li><a href="formularios.html">Formularios</a></li>
+            <li><a href="iframe.html">Iframes</a></li>
+            <li><a href="transiciones.html">Transiciones</a></li>
+            <li><a href="columnas.html">Columnas</a></li>
+            <li><a href="video.html">Video</a></li>
+            <li><a href="audio.html">Audio</a></li>
+            <li><a href="transpariencia.html">Transpariencias</a></li>
+            <li><a href="animacion.html">Animacion</a></li>
+            <li><a href="SVG.html">SVG</a></li>
+            <li><a href="responsive.html">Responsive</a></li>
+            <li><a href="contenidoeditable.html">Contenido Editable</a></li>
+            <li><a href="storage.html">Storage</a></li>
+        </ul>
+
+    </nav>
+    <section>
+        <h2>Colores predefinidos</h2>
+        <article>
+            <p>En HTML5 existen colores predefinidos que tienen nombres mucho más fáciles de recordar que sus
+                respectivos códigos hexadecimales. Es mucho más fácil acordarse de nombres de colores como 'Tomato',
+                'Gold', 'Olive', 'Chocolate', 'Silver', 'Magenta' o 'Salmon' que de sus respectivos códigos de color en
+                hexadecimal: '#FF6347', '#FFD700', '#808000', '#D2691E', '#C0C0C0', '#FF00FF' o '#FA8072'.
+            </p>
+            <div id="diTransparencia">
+                color=tomato;<br>
+                color=#FF6347
+            </div>
+        </article>
+
+        <article>
+            <h2>Transparencias</h2>
+            <p>En CSS3, se pueden definir transparencias, ya sea en el color de fondo de un < div> en concreto como en
+                algunos elementos individuales.<br>
+                Así, para definir un color de fondo con un índice de transparencia determinado utilizamos 'rgba
+                (rojo, verde, azul, transparencia)':</p>
+            <div id="diTransparencia">
+                background-color:rgba(255,0,0, 0.4);
+            </div><br>
+
+            <div id="cuadro1"></div>
+            <div id="cuadro2"></div>
+            <p>El primer cuadro representa un color rojo con una opacidad del 40% (0.4), mientras que el segundo cuadro
+                se ha añadido para poder ver la diferencia con el color rojo sin transparencia.
+            </p><br>
+        </article>
+
+        <article>
+            <h2>Degradados</h2>
+            <p>Los degradados a través de código CSS3 han sido una de las que más vueltas han dado hasta estabilizarse y
+                generalizarse de la misma forma en (casi) todos los navegadores.</p>
+            <p>Vamos a dejar en el bául del ólvido el infernal código de degradado que utilizaban las versiones de</p>
+            <ul>
+                <li>Firefox 3.6+</li>
+                <li>Chrome +10</li>
+                <li>Safari +5.1</li>
+                <li>Opera 11.10+ (Sólo degradados lineales)</li>
+                <li>(e increiblemente en) Internet Explorer 10+</li>
+            </ul><br>
+
+            <h3>Degradados lineales</h3>
+            <p>Primero definimos dónde empieza el degradado (top, bottom, right, left) o bien indicando un ángulo
+                (45deg), seguido de los colores que compondrán el degradado y de manera opcional se puede indicar cuánto
+                durará cada color (en porcentaje).</p>
+
+            <div id="diTransparencia">
+                background:linear-gradient(dónde empieza, color1, 40%, color2, 60%);
+            </div><br>
+
+            <h3>Algunos ejemplos:</h3>
+            <div class="contenedordegradado">
+                <div id="degradado1"></div>
+                    <div id="diTransparencia">
+                        background:linear-gradient(top, red, gold);
+                    </div>
+                    <p>Degradado lineal (linear-gradient) que empieza en la parte superior del < div> (top) y que va
+                        desde el color red hasta el color gold.</p>
+            </div><br>
+
+            <div id="diTransparencia">
+                background:linear-gradient(30deg, crimson,sienna, royalblue, indianred, purple);
+            </div><br>
+            
+            <div class="contenedordegradado">
+                <div id="degradado2"></div>
+                <div class="caja">
+                    <p>Degradado lineal (linear-gradient) que se inicia en la esquina superior izquierda con una
+                        inclinación de 30 grados (30deg) y que en toda su extensión pasa por los colores crimson,
+                        sienna, royalblue, indianred y purple.</p>
+                </div>
+            </div><br>
+
+            <div id="diTransparencia">
+                background:linear-gradient(top, black 10%, orangered 75%, yellow);
+            </div><br>
+            
+            <div class="contenedordegradado">
+                <div id="degradado3"></div>
+                <div class="caja">
+                    <p>Degradado lineal (linear-gradient) que empieza en la parte superior del
+                        < div> (top) y que define 3 colores indicando sus dimensiones. Así, mientras el negro ocupa el
+                            10% del espacio, el orangered ocupa el 65% (del 10 al 75%), quedando el 25% restante para el
+                            yellow.
+                    </p>
+                </div>
+            </div><br>
+
+            <h3>Degradados radiales</h3>
+            <p>Primero definimos dónde está el centro del degradado a través de una posición horizontal y luego una
+                vertical (utilizando center, top, bottom, right, left o unas coordenadas en píxeles 125px 200px).
+                Seguidamente se define la forma (circle o ellipse). Después opcionalmente se puede definir cómo se
+                expandirá el degradado. Por último se definen los colores que compondrán el degradado y de manera
+                opcional se puede indicar cuánto durará cada color (en porcentaje).</p>
+                <br>
+
+            <div id="diTransparencia">
+                background:radial-gradient(dónde está el centro, circle/ellipse expansión del degradado, color1, 40%,
+                color2, 60%);
+            </div>
+            <br>
+            <p>Los diferentes valores referentes a la expansión del degradado son:</p>
+            <br>
+
+            <div class="contenedordegradado">
+                <div class="caja">
+                    <h4>closest-side: </h4>
+                    <p>El degradado se expande hasta que su forma exterior se encuentra con el lado de la caja que está
+                        más cerca del centro del degradado.
+                    </p><br>
+                    <p>En este ejemplo vemos como su forma exterior (círculo amarillo) crece desde su centro hasta el
+                        lado de la caja que está más cercano al centro del degradado, que es el lado de arriba.</p>
+                </div>
+                <div id="degradadoradial"></div>
+            </div><br>
+
+            <div class="contenedordegradado">
+                <div class="caja">
+                    <h4>farthest-side:</h4>
+                    <p>El degradado se expande hasta que su forma exterior se encuentra con el lado de la caja que está
+                        más lejos del centro del degradado.
+                    </p><br>
+                    <p>En este ejemplo vemos como su forma exterior (círculo amarillo) crece desde su centro hasta que
+                        se encuentra con el lado más alejado del centro del degradado, que en este caso es el lado
+                        derecho.</p>
+                </div>
+                <div id="degradadoradial2"></div>
+            </div><br>
+
+            <div class="contenedordegradado">
+                <div class="caja">
+                    <h4>closest-corner:</h4>
+                    <p>El degradado se expande hasta que su forma exterior se encuentra con la esquina de la caja que se
+                        encuentra más cerca al centro del degradado.
+                    </p><br>
+                    <p>En este ejemplo vemos como la forma exterior (círculo amarillo) crece desde el centro hasta
+                        encontrarse con la esquina más cercana al centro del degradado, que en este caso es la esquina
+                        superior izquierda de la caja.</p>
+                </div>
+                <div id="degradadoradial3"></div>
+            </div><br>
+
+            <div class="contenedordegradado">
+                <div class="caja">
+                    <h4>farthest-corner:</h4>
+                    <p>El degradado se extiende hasta que su forma exterior se encuentra con la esquina de la caja que
+                        se encuentra más lejos del centro del degradado.
+                    </p><br>
+                    <p>En este ejemplo podemos ver como su forma exterior (el círculo amarillo) crece desde el centro
+                        del degradado hasta encontrarse con la esquina más alejada de su centro, que en este caso es la
+                        esquina inferior derecha de la caja.</p>
+                </div>
+                <div id="degradadoradial4"></div>
+            </div>
+
+            <h4>Algunos ejemplos</h4><br>
+            <div id="diTransparencia">
+                background:radial-gradient(center center, circle, black, #1162ac);
+            </div><br>
+
+            <div class="contenedordegradado">
+                <div id="degradado4"></div>
+                <div class="caja">
+                    <p>Degradado radial (radial-gradient) que empieza en el centro del < div> (center center), que tiene
+                            una forma de círculo (circle) y que va del color negro hasta un color azul con código
+                            hexadecimal #1162ac.
+                    </p>
+                </div>
+            </div><br>
+
+            <div id="diTransparencia">
+                background:radial-gradient(200px top, ellipse, white, #1162ac, black);
+            </div><br>
+
+            <div class="contenedordegradado">
+                <div id="degradado5"></div>
+                <div class="caja">
+                    <p>Degradado radial (radial-gradient) que empieza horizontalmente a 200px de la esquina superior
+                        izquierda y verticalmente en la parte superior (top) y que con forma elíptica (ellipse) va del
+                        color white hasta el black, pasando -por partes iguales- por el azul con código de color
+                        #1162ac.
+                    </p>
+                </div>
+            </div><br>
+
+            <div id="diTransparencia">
+                background:radial-gradient(center center, ellipse, white 25%, peru 66%, black 96%);
+            </div><br>
+
+            <div class="contenedordegradado">
+                <div id="degradado6"></div>
+                <div class="caja">
+                    <p>Degradado radial (radial-gradient) que empieza en el centro (center center) y que define las
+                        dimensiones elípticas de los colores que se van a utilizar. White en un 25%, peru en un 41% (del
+                        25 al 66%) y black en un 30% (del 66 al 96%), ocupando también el 4% restante al no indicarse
+                        más colores.
+                    </p>
+                </div>
+            </div>
+        </article>
+
+        <article>
+            <h2>Compatibilidad con navegadores</h2>
+            <p>Para que los degradados funcionen en la mayoría de navegadores modernos es necesario añadir el código CSS
+                con los diferentes prefijos de navegador, sin olvidar el código genérico (sin prefijos) para que también
+                funcione cuando los prefijos no sean necesarios.</p>
+                <pre><br>
+                    background:linear-gradient(top, red, gold);
+                    background:-webkit-linear-gradient(top, red, gold);
+                    background:-moz-linear-gradient(top, red, gold);
+                    background:-o-linear-gradient(top, red, gold);
+                    background:-ms-linear-gradient(top, red, gold);
+                </pre>
+        </article>
+    </section>
+    
+    <aside>
+        <h3>Links</h3>
+        <p> Ir a otra pagina </p>
+    </aside>
+
+    <footer>
+        <p> Contactos con: Emily Muñoz </p>
+    </footer>
+</body>
+</html>

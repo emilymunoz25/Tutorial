@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio</title>
+    <link rel="stylesheet" href="CSS/estilo1.css">
+</head>
+
+<body>
+    <header>
+        <h1>Tutorial HTML5 CSS</h1>
+    </header>
+    <nav>
+        <ul>    
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="bordes.html">Bordes</a></li>
+            <li><a href="sombras.html">Sombras</a></li>
+            <li><a href="imagenes.html">Imagenes</a></li>
+            <li><a href="posicion.html">Posicion</a></li>
+            <li><a href="transformacion.html">Transformacion</a></li>
+            <li><a href="formularios.html">Formularios</a></li>
+            <li><a href="iframe.html">Iframes</a></li>
+            <li><a href="transiciones.html">Transiciones</a></li>
+            <li><a href="columnas.html">Columnas</a></li>
+            <li><a href="video.html">Video</a></li>
+            <li><a href="audio.html">Audio</a></li>
+            <li><a href="transpariencia.html">Transpariencias</a></li>
+            <li><a href="animacion.html">Animacion</a></li>
+            <li><a href="SVG.html">SVG</a></li>
+            <li><a href="responsive.html">Responsive</a></li>
+            <li><a href="contenidoeditable.html">Contenido Editable</a></li>
+            <li><a href="storage.html">Storage</a></li>
+        </ul>
+    </nav>
+    <section>
+        <h2>Diferentes estandares de audio</h2>
+        <article>
+            <p>Para utilizar audio en HTML5 sin usar plugins externos ocurre algo parecido que con el vídeo. Existen
+                diferentes formatos de audio y desgraciadamente no existe ninguno que funcione perfectamente en todos
+                los navegadores, por lo que al menos tendremos que utilizar dos formatos para poder abarcarlos a todos.
+            </p>
+            <p>Estos 2 formatos de audio mayoritarios son:</p>
+                <img src="imagenes/mp3.png" alt="Audio">
+                <p>El formato MP3 (ficheros con extensión .mp3) abarca a la mayoría de navegadores, excepto a
+                    FireFox. Aunque está ampliamente arraigado, está sujeto a patentes.</p>
+                
+                    <img src="imagenes/ogg.png" alt="Audio">
+                <p>El formato OGG (ficheros con extensión .ogg) es un formato de audio libre de patentes, que
+                    abarca a la mayoría de navegadores, excepto a Internet Explorer y Safari.</p>
+        </article>
+    </section>
+
+    <section>
+        <h2>Compatibilidad con navegadores</h2>
+        <p>La tabla de formatos de audios aceptados por los diferentes navegadores queda así:</p>
+        <table>
+            <tr>
+                <th></th>
+                <th id="th">MP3</th>
+                <th id="th">OGG</th>
+                <th id="th">WAV</th>
+            </tr>
+            <tr>
+                <th id="th">Firefox</th>
+                <td>NO</td>
+                <td>si</td>
+                <td>si</td>
+            </tr>
+            <tr>
+                <th id="th">Chrome</th>
+                <td>si</td>
+                <td>si</td>
+                <td>si</td>
+            </tr>
+            <tr>
+                <th id="th">Opera</th>
+                <td>si</td>
+                <td>si</td>
+                <td>si</td>
+            </tr>
+            <tr>
+                <th id="th">Safari</th>
+                <td>si</td>
+                <td>NO</td>
+                <td>si</td>
+            </tr>
+            <tr>
+                <th id="th">IExplorer</th>
+                <td>si</td>
+                <td>NO</td>
+                <td>NO</td>
+            </tr>
+        </table>
+
+        <p>
+            < audio> El código sencillo para un único formato de audio sería así:
+        </p><br>
+
+        <div id="diAudio">
+            < audio src="audio.mp3">
+                < /audio>
+        </div><br>
+
+        <p>En el tag 'audio' es posible incorporar algunos atributos de control del audio, como son:</p>
+        <ul>
+            <li><b>controls</b>: Establece si tendrá la barra de navegación (play, stop, volumen...) o no</li>
+            <li><b>autoplay</b>: Indica si el audio se inicia automáticamente al cargar la página html</li>
+            <li><b>loop</b>: Establece si al acabar el audio, éste debe volver a empezar indefinidamente</li>
+            <li><b>preload</b>: Indica si el audio se empieza a cargar cuando el navegador carga la página html</li>
+        </ul>
+
+        <p>Por lo tanto, si utilizásemos algunos atributos, el código anterior quedaría de la siguiente manera:</p><br>
+        <div id="diAudio">
+            < audio src="audio.mp3" autoplay controls loop>
+                < /audio>
+        </div><br>
+
+    </section>
+
+    <section>
+        <h2>Ejemplo práctico</h2>
+        <p>Si queremos que el audio se pueda escuchar desde cualquier navegador (que soporte HTML5), tenemos que añadir
+            a este código más posibilidades y por lo tanto tenemos que tener el audio grabado al menos en formato mp3 y
+            ogg. Por lo que el código completo quedaría así:</p>
+        <div id="di">
+            < audio controls><br>
+                < source src="audio.mp3" type="audio/mpeg" /><br>
+                < source src="audio.ogg" type="audio/ogg" /><br>
+                < /audio>
+        </div><br>
+        <p>En este ejemplo se han utilizado los atributos de 'autoplay' (para que escuches el audio cuando entres en
+            esta página) y 'controls' (para mostrar la barra de controles).
+        </p>
+        <audio controls preload="auto"> >
+            <source src="imagenes/audio.mp3" type="audio/mpeg" />
+            </audio>
+    </section>
+
+    <aside>
+        <h3>Links</h3>
+        <p> Ir a otra pagina </p>
+    </aside>
+
+    <footer>
+        <p> Contactos con: Emily Muñoz </p>
+    </footer>
+</body>
+</html>
