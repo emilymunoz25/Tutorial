@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iFrame</title>
+    <link rel="stylesheet" href="CSS/estilo1.css">
+
+</head>
+
+<body>
+    <header>
+        <h1>Tutorial HTML5 CSS</h1>
+    </header>
+    <nav>
+        <ul>    
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="bordes.html">Bordes</a></li>
+            <li><a href="sombras.html">Sombras</a></li>
+            <li><a href="imagenes.html">Imagenes</a></li>
+            <li><a href="posicion.html">Posicion</a></li>
+            <li><a href="transformacion.html">Transformacion</a></li>
+            <li><a href="formularios.html">Formularios</a></li>
+            <li><a href="iframe.html">Iframes</a></li>
+            <li><a href="transiciones.html">Transiciones</a></li>
+            <li><a href="columnas.html">Columnas</a></li>
+            <li><a href="video.html">Video</a></li>
+            <li><a href="audio.html">Audio</a></li>
+            <li><a href="transpariencia.html">Transpariencias</a></li>
+            <li><a href="animacion.html">Animacion</a></li>
+            <li><a href="SVG.html">SVG</a></li>
+            <li><a href="responsive.html">Responsive</a></li>
+            <li><a href="contenidoeditable.html">Contenido Editable</a></li>
+            <li><a href="storage.html">Storage</a></li>
+        </ul>
+    </nav>
+    <section>
+        <h2>
+            < iframe >
+        </h2>
+        <article>
+            <p>
+                < iframe > es una etiqueta de HTML bastante antigua que permite añadir de una manera muy fácil y rápida
+                    una página web o contenido dentro de otra página.
+                    Para ello únicamente hay que indicar la dirección web del contenido o página html que quieres
+                    insertar y el espacio de la ventana que mostrará dicho contenido.</p>
+
+            <br>
+            <p>La sintaxis es la siguiente: </p>
+            <div id="d">
+                < iframe width="640" height="510" src="http://www..." frameborder="0">
+                    < /iframe>
+            </div>
+            <p>
+                Los atributos que utilizamos son <b>width</b> y <b>height</b> para definir el tamaño que tendrá la
+                ventana que mostrará el contenido, frameborder para que esta ventana o marco no tenga borde, y sobre todo src para
+                indicar qué página o contenido se debe mostrar dentro de esta ventana.
+            </p>
+        </article>
+
+        <article>
+            <h2>Añadir un mapa de google Maps</h2>
+            <div class="contenedor-iframe">
+                <img src="imagenes/maps.png" alt="mapa" width="100px">
+                <div class="caja1">
+                    <p>Accedemos a Google Maps (www.maps.google.es)</p>
+                    <p>Buscamos la dirección del mapa que queremos mostrar<br>
+                        (o el nombre de la empresa si existe en Google Maps).</p>
+                </div>
+            </div>
+
+            <div class="contenedor-iframe">
+                <img src="imagenes/maps.png" alt="mapa" width="500px">
+                <div class="caja1">
+                    <p>Aplicamos el zoom que deseemos.<br>
+                        Pulsamos sobre el botón "Configuración"<br>
+                        (ubicado en la parte inferior derecha de la pantalla)<br>
+                        y seleccionamos la opción:<br>
+                        "Compartir e insertar mapa".</p>
+                    <img src="imagenes/maps1.png" alt="compartir" width="200px">
+                </div>
+            </div>
+
+            <div class="contenedor-iframe">
+                <img src="imagenes/enlacemaps.png" alt="mapa" width="500px">
+                <div class="caja1">
+                    <p>Seleccionamos la pestaña superior derecha:<br>
+                        "Insertar mapa".</p>
+                </div>
+            </div>
+
+            <div class="contenedor-iframe">
+                <img src="imagenes/maps2.png" alt="mapa" width="500px">
+                <div class="caja1">
+                    <p>Para indicar el tamaño del mapa hacemos<br>
+                        clic sobre la opción que inicialmente muestra<br>
+                        el valor "Mediano":<br>
+                        (ubicado en la parte superior izquierda de la pantalla)..</p>
+                    <img src="imagenes/maps3.png" alt="mapa" width="200px">
+                    <p>Seleccionamos la opción:<br>
+                        "Tamaño personalizado".</p>
+                </div>
+            </div>
+
+            <div class="contenedor-iframe">
+                <img src="imagenes/insertarmapa.png" alt="mapa" width="500px">
+                <div class="caja1">
+                    <p>Escribimos la anchura y altura<br>
+                        que queremos que tenga el mapa<br>
+                        (expresado en píxeles)</p><br>
+                    <p>Copiamos todo el código<br>
+                        (el que empieza por < iframe...>).</p>
+                </div>
+            </div>
+            <p>Lo pegamos dentro de un < div > que debe tener un nombre de id o class para poder editarlo posteriormente con CSS.</p>
+        </article>
+
+        <article>
+            <h3>Ejemplo</h3>
+            <div class="iframe">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1821.504152345343!2d-76.56996245455458!3d2.4898179353779386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3005c54cb4be59%3A0xabb5de6ef731d3dc!2sBello%20Horizonte!5e1!3m2!1ses!2sco!4v1774498534585!5m2!1ses!2sco" width="512" height="425" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </article>
+    </section>
+
+    <aside>
+        <h3>Links</h3>
+        <p> Ir a otra pagina </p>
+    </aside>
+
+    <footer>
+        <p> Contactos con: Emily Muñoz </p>
+    </footer>
+</body>
+
+</html>

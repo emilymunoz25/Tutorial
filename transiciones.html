@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transiciones</title>
+    <link rel="stylesheet" href="CSS/estilo1.css">
+</head>
+
+<body>
+    <header>
+        <h1>Tutorial HTML5 CSS</h1>
+    </header>
+    <nav>
+        <ul>    
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="bordes.html">Bordes</a></li>
+            <li><a href="sombras.html">Sombras</a></li>
+            <li><a href="imagenes.html">Imagenes</a></li>
+            <li><a href="posicion.html">Posicion</a></li>
+            <li><a href="transformacion.html">Transformacion</a></li>
+            <li><a href="formularios.html">Formularios</a></li>
+            <li><a href="iframe.html">Iframes</a></li>
+            <li><a href="transiciones.html">Transiciones</a></li>
+            <li><a href="columnas.html">Columnas</a></li>
+            <li><a href="video.html">Video</a></li>
+            <li><a href="audio.html">Audio</a></li>
+            <li><a href="transpariencia.html">Transpariencias</a></li>
+            <li><a href="animacion.html">Animacion</a></li>
+            <li><a href="SVG.html">SVG</a></li>
+            <li><a href="responsive.html">Responsive</a></li>
+            <li><a href="contenidoeditable.html">Contenido Editable</a></li>
+            <li><a href="storage.html">Storage</a></li>
+        </ul>
+
+    </nav>
+    <section>
+        <h2>Transiciones</h2>
+
+        <article>
+            <p>Las transiciones (transition) funcionan como pequeñas animaciones que siguen las mismas características
+                que la etiqueta 'transform' (cambio de posición, tamaño, rotación...) aunque con la capacidad de poder
+                especificar una duración para que se produzca dicha transformación y así poder utilizarla como una
+                animación sencilla.
+            </p>
+            <p>Para poder observar su funcionamiento vamos a utilizar un < div> llamado 'martillo' que contiene el
+                    dibujo de un martillo</p>
+                <img src="imagenes/martillo.png" alt="transformacion" width="300px">
+                
+                <div>
+                    <p>A este < div> le vamos a aplicar varias transiciones (de posición, tamaño y rotación) y para que
+                            podamos activar cada una de ellas en el momento que queramos deberás pasar el cursor por
+                            encima de
+                            cada ejemplo. Es muy importante tener en cuenta que para que 'transition' funcione en todos
+                            los navegadores deberemos repetir la propiedad anteponiendo los prefijos de cada uno de los
+                            navegadores:<br>
+                            <b>-webkit-</b> (para Chrome y Safari)<br>
+                            <b>-moz-</b> (para Firefox).<br>
+                            <b>-o-</b> (para Opera)<br>
+                            <b>-ms-</b> (para versiones modernas de Internet Explorer).
+                    </p>
+                </div>
+        </article>
+
+        <article>
+            <h2>Transición con una única propiedad</h2>
+            <p>Cuando pases con el cursor por encima del martillo que hay bajo este texto se producirá una transición
+                que durará 1 segundo y medio y que producirá que el < div> martillo se desplace horizontamente 400
+                    píxeles hacia la derecha.</p><br>
+
+                #martillo{<br>
+                transition:left 1.5s;<br>
+                }<br><br>
+
+                #martillo:hover{<br>
+                position:relative;<br>
+                left:400px;<br>
+                }
+            <div>
+                <img src="imagenes/martillo.png" alt="transformacion" width="300px" id="martilloT">
+            </div>
+        </article>
+
+        <article>
+            <h2>Transición con múltiples propiedades</h2>
+            <p>Para especificar el cambio de varias propiedades con diferentes tiempos para para cada una de ellas,
+                únicamente tenemos que separar las diferentes propiedades con ",".</p>
+            <p>Así, en este ejemplo, al pasar el cursor por encima, se producirán 6 cambios de propiedades al mismo
+                tiempo:</p>
+            <ul>
+                <li>El < div> martillo se moverá 400px hacia la derecha (utilizando 'left') en 1.5 segundos.</li>
+                <li>El color de fondo ('background-color') del < div> martillo se convertirá en negro en 2 segundos.</li>
+                <li>La anchura del < div> se modificará hasta llegar a los 225 píxeles en 1 segundo.</li>
+                <li>La altura del < div> se modificará hasta llegar a los 200 píxeles (empujando hacia abajo el
+                    contenido que le sigue) durante 1 segundo.</li>
+                <li>El espacio que hay entre el extremo izquierdo del < div> y el dibujo que éste contiene
+                    ('padding-left') se expandirá hasta llegar a los 100 pixeles en 1 segundo.</li>
+                <li>El espacio que hay entre el extremo superior del < div> y el dibujo que éste
+                    contiene ('padding-top') se expandirá hasta llegar a los 20 pixeles en 1
+                    segundo.</li>
+            </ul>       
+                               
+        <pre>
+            #martillo{
+                background-color:orange;
+                width:100px;
+                height:175px;
+                transition:left 1.5s, background-color 2s, width 1s, height 1s, padding-left 1s, padding-top 1s;<br>
+            }
+
+            #martillo:hover{
+                position:relative;
+                left:400px;
+                background-color:black
+                width:225px;
+                height:200px;
+                padding-left:100px;
+                padding-top:20px;
+            }
+        </pre>                        
+                
+            <img src="imagenes/martillo.png" alt="transformacion" width="300px" id="martilloT2">
+
+            <p>En el primer selector (#martillo) se especifican los valores iniciales (color de fondo 'background-color', anchura 'width' y altura 'height'), los que no se definan (como 'padding-left' y
+                'padding-top') se tomarán los valores por defecto.</p>
+        </article>
+
+        <article>
+            <h2>Las palabras mágicas</h2>
+            <p>Aunque no es obligatorio, tenemos la posibilidad de especificar el tipo de movimiento y si debe existir
+                algún retardo para que empiece la animación.</p>
+            <p>Además, como todavia es necesario repetir el código anteponiendo los prefijos -webkit-, -moz-, -op- y
+                -ms- (para asegurar la compatibilidad con todos los navegadores), es interesante poder especificar todos
+                estos parámetros en una sola línea.</p>
+            
+            <div id="di">
+                transition:[propiedad a modificar] [Duración en segundos] [Tipo de animación] [Retardo];<br>
+                transition: width 2s ease-out, 0.5s;
+            </div>
+            
+            <h4> [Propiedades a modificar]:</h4>
+            <p>En los ejemplos anteriores hemos utilizado unas cuantas propiedades, pero se pueden utilizar muchás más,
+                como:</p>
+
+            <div id="columnas">
+                <li>all (selecciona todas)</li>
+                <li>background-colo</li>
+                <li>border</li>
+                <li>border-radius</li>
+                <li>color</li>
+                <li>top</li>
+                <li>bottom</li>
+                <li>left</li>
+                <li>right</li>
+                <li>box-shadow</li>
+                <li>width</li>
+                <li>height</li>
+                <li>line-height</li>
+                <li>margin</li>
+                <li>opacity</li>
+                <li>word-spacing</li>
+                <li>letter-spacing</li>
+                <li>fill</li>
+                <li>padding</li>
+                <li>stroke</li>
+                <li>text-shadow</li>
+                <li>vertical-align</li>
+                <li>visibility</li>
+                <li>z-index</li>
+            </div><br>
+
+            <h4>[Duración en segundos]:</h4>
+            <p>Se debe especificar el número de segundos que va a durar la animación. 
+                <br> Primero se escribe un valor numérico (los segundos) y seguido la "s" (por ejemplo: 3s).</p><br>
+
+            <h4>[Tipo de animación]:</h4>
+            <p>Esta posibilidad es opcional. Tenemos la posibilidad de indicar un tipo de 'easing', es decir, si la
+                animación empezará suavemente e irá acelerándose progresivamente, si pasará todo lo contrario o si el
+                movimiento tendrá una velocidad uniforme durante todo su recorrido entre otras.
+            </p><br>
+            
+            <p>Algunas de las posibilidades son las siguientes:</p>
+            <ul>
+                <li><b>linear:</b> La velocidad de la animación es uniforme en todo el recorrido.</li>
+                <li><b>ease:</b> La velocidad se acelera al inicio, luego se retarda un poco y se acelera al final de
+                    nuevo.</li>
+                <li><b>ease-in:</b> La animación empieza lentamente y va aumentando progresivamente.</li>
+                <li><b>ease-out:</b> La animación empieza muy rápida y va descendiendo progresivamente.</li>
+                <li><b>ease-in-out:</b> La animación empieza y acaba lentamente, y es en la parte central del recorrido
+                    donde la velocidad es más rápida.</li>
+            </ul><br>
+            
+            <h4>[Retardo]:</h4>
+            <p>En este apartado es posible posible especificar un tiempo (en segundos) que el navegador esperará antes
+                de iniciar la animación.
+                Se especifica el número de segundos a esperar seguido de la "s" (por ejemplo: 1s).</p>
+                
+            <pre>
+                #martillo{
+                    opacity:1;
+                    transition:opacity 2s ease-out 0.5s;
+                }
+
+                #martillo:hover{
+                    opacity:0;
+                }    
+            </pre>
+
+            <br>
+            <img src="imagenes/martillo.webp" alt="transformacion" width="300px" id="martillotr3">
+            <br>
+
+            <p>Cuando coloques el cursor encima del martillo que hay sobre estas líneas, primero -se esperará medio
+                segundo (0.5s)-, después de la espera, el martillo se irá haciendo transparente en una animación con
+                deceleración (ease-out) que durará 2 segundos (empezará muy rápido y a medida que vaya haciendose
+                transparente irá reduciendo la velocidad).</p>
+        </article>
+
+        <article>
+            <h2>Compatibilidad con todos los navegadores</h2>
+            <p>Para garantizar la compatibilidad con navegadores antiguos, las transiciones es conveniente que lleven
+                los prefijos, quedando de esta manera un código más largo que la deuda exterior de Zaire.</p>
+            <p>Así, el código del ejemplo anterior queda de la siguiente manera:</p>
+
+        <pre>
+            #martillo{
+                opacity:1;
+                -webkit-opacity:1;
+                -moz-opacity:1;
+                -o-opacity:1;
+                -ms-opacity:1;
+                transition:opacity 2s ease-out 0.5s;
+                -webkit-transition:opacity 2s ease-out 0.5s;
+                -moz-transition:opacity 2s ease-out 0.5s;
+                -o-transition:opacity 2s ease-out 0.5s;
+                -ms-transition:opacity 2s ease-out 0.5s;
+            }
+
+            #martillo:hover{
+                opacity:0; 
+                -webkit-opacity:0;
+                -moz-opacity:0;
+                -o-opacity:0;
+                -ms-opacity:0;
+            }
+        </pre>
+                
+            <p> Hasta hace poco Internet Explorer 9 todavia no era compatible con las transiciones, mientras que el
+                resto de navegadores lo aceptan desde versiones anteriores a las actuales.</p>
+        </article>
+    </section>
+    
+    <aside>
+        <h3>Links</h3>
+        <p> Ir a otra pagina </p>
+    </aside>
+
+    <footer>
+        <p> Contactos con: Emily Muñoz </p>
+    </footer>
+</body>
+</html>
